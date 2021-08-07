@@ -1,0 +1,26 @@
+﻿<Window x:Class="Chess.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Chess"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="150px" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <StackPanel Orientation="Vertical">
+            <ComboBox SelectedIndex="0">
+                <ComboBoxItem>Arabian</ComboBoxItem>
+                <ComboBoxItem>Chinese</ComboBoxItem>
+                <ComboBoxItem>Middle</ComboBoxItem>
+            </ComboBox>
+            <Button Click="x_click_start_game">New game</Button>
+            <Button>Resign</Button>
+        </StackPanel>
+        <UniformGrid x:Name="x_board" Grid.Column="1"  Columns="8" Rows="8">
+        </UniformGrid>
+    </Grid>
+</Window>
